@@ -1,0 +1,94 @@
+<!-- 
+자바스크립트 function 문법
+
+function (일명 함수)
+: 길고 더러운 코드 한 단어로 축약하고 싶을 때 쓰는 문법
+
+: 특정 기능을 다음에도 쓰기 위해 모듈화해놓는 문법
+
+
+function 자유롭게작명(){
+  축약하고 싶은 긴 코드
+}
+
+
+(참고)
+
+함수 이름을 영어로 작명할 때 
+
+- 영어소문자로 시작
+
+- open_alert() 이런거 안됩니다. openAlert() 이렇게 붙여서 쓰는게 자바스크립트 관습입니다. (일명 camelCase)
+
+- 한글작명도 상관없긴합니다.
+
+
+
+자주 겪는 에러들 1. JS 코드는 밑에 작성
+
+컴퓨터가 html 파일을 읽을 때 위에서 부터 한줄한줄 읽는데
+미리 html을 읽어놔야 조작가능
+
+
+자주 겪는 에러들 2. 오타주의
+
+셀렉터 이런거 맨날 오타남
+getElementById() 인데 i를 소문자로 쓴다든지
+getELementById('alert1111') 처럼 잘못된 id를 찾고 있거나
+
+에러메세지 > 브라우저 개발자도구 Console 탭
+
+▲ 여기에 Cannot read properties of null 어쩌구 라는 에러가 나오면 
+alert111 이런 식으로 id 이름이 잘못되었다는 뜻
+
+▲ ~~ is not a function 은 함수명이 잘못되었다는 뜻
+
+getElementById() 이것도 소괄호 붙는거 보니까 함수인데
+여기에 오타났다는 뜻
+
+아무튼 오타났다고 알려주는 고마운 메세지니까 이거 보고 "디버깅" 이란걸 해나가면 됩니다.
+
+디버깅 : 버그를 없애는 것
+
+실은 에러메세지 그대로 구글 찾아보는것도 빠름
+
+
+
+
+(오늘의 결론)
+
+function 문법 생김새만 외운다고 공부 끝이 아니라 
+
+나중에 혼자서도 코드짜고 싶으면 용도를 잘 외우고 지나가면 되겠습니다.
+
+function 왜, 언제 쓴다고 했습니까
+
+그걸 알면 이제 자유자재로 function 활용가능한 것임 
+
+
+-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../Level 1/css/01-동적 UI.css" />
+    </head>
+    <body>
+        <div class="alert-box" id="alert">
+            알림창임
+            <button onclick="알림창닫기()">닫기</button>
+        </div>
+        <button onclick="알림창열기()">버튼</button>
+
+        <script>
+            function 알림창열기() {
+                document.getElementById('alert').style.display = 'block';
+            }
+            function 알림창닫기() {
+                document.getElementById('alert').style.display = 'none';
+            }
+        </script>
+    </body>
+</html>
