@@ -1,0 +1,133 @@
+<!-- 
+자바스크립트의 근본
+
+- HTML 조작이 목적 > 예쁜 UI
+- html 파일 안에 몰래 집어넣는 따까리 언어
+- html 파일 안에 몰래 숨어서 "html 조작과 변경" 을 담당하는 언어
+
+> 자바스크립트 코드를 잘 짜면 html을 원하는대로 마구마구 조작가능 
+
+왜 조작을 하냐?
+
+- 탭, 모달 등 웹페이지 UI 만들 수 있음
+- 유저가 입력한 데이터를 검사할 수도 있음
+- 유저가 버튼누르면 서버로 데이터 요청할 수도 있음 
+
+
+
+* <script> 안에 적은 코드는 브라우저 새로고침시 1번 실행
+
+
+
+자바스크립트 배운 내용은 아무것도 없지만
+영어좀 알면 누구나 해석가능한 쉬운 언어
+
+
+
+document.getElementById('hello').innerHTML = '안녕';
+
+
+
+document -> 문서인데 여기선 html 웹문서겠죠
+
+마침표 -> ~의 
+
+getElementById('어쩌구') -> 아이디가 '어쩌구'인 html 요소 (일명 element) 를 찾으셈 
+
+innerHTML -> 딱봐도 그냥 내부 HTML이라는 뜻인듯 
+
+= -> 등호는 프로그래밍에서 오른쪽에 있는걸 왼쪽에 대입하라는 뜻
+
+'바보' -> 바보라는 문자 (큰따옴표, 작은따옴표안에 담겨있으면 항상 문자)
+
+
+
+
+단어 뜻 아니까 이제 코드 해석도 가능하겠죠? 
+
+document.getElementById('hello').innerHTML = '안녕'; 
+-> 웹문서의 id="hello"인거 찾아서 그거의 내부 HTML에 '안녕' 집어넣어라
+
+
+눈치 빠르면 응용도 가능할 것 같군요
+
+
+Q. 'hello' 이 부분을 바꾸면 다른 html 요소도 맘대로 바꿀 수 있겠군요?
+
+A. 넴
+
+Q. innerHTML과 '안녕' 이 부분을 바꾸면 html 요소의 다른 내용도 바꿀 수 있겠군요?
+
+A. 넴 
+
+
+그래서 빠른 결론은
+
+document.getElementById('???').??? = '???'; 
+여기 물음표만 맘대로 바꿔주면 html의 모든걸 변경하고 조작가능
+
+수백개 있어서 필요할 때 검색해서 쓰는게 좋은 방법
+
+
+
+(참고)
+
+.getElementById() : 셀렉터 
+> html 요소를 찾기 위해 사용
+
+.innerHTML / .style / .color 
+: 점찍는데 괄호없는건 메소드(또는 함수) 
+> html 요소의 어떤 속성을 변경할지 결정하기 위해 사용
+
+
+
+프로그래밍 하는 법
+
+프로그래밍 : 컴퓨터에게 일시키는 것 
+
+(중요) 컴퓨터와 사람처럼 대화하면 X
+
+사람은 "너 저기가서 저것좀 바꿔와" 하면 잘 알아듣습니다.
+
+컴퓨터는 "너 저기가서 저것좀 바꿔와" 하면 절대 못알아듣습니다.
+
+"저거가 뭐임?"
+
+이렇게 되물을걸요 
+
+
+컴퓨터는 지능이 0 입니다.
+
+"너 id가 hello인 html요소 있지 그거 찾아서 안의 내용을 안녕으로 바꿔"
+
+그래야 알아듣습니다.
+
+그래서 document부터 시작해서 코드를 저따구로 길게 상세히 짜는 것임
+
+
+사람하고 대화하는 것 처럼 코드 X
+
+바보 멍청이 상대하듯 코드 O
+
+> 프로그래머들이 성격 이상한 이유
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=\, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="hello">안녕하세요</h1>
+        <h1 id="hi">JS 초보에요</h1>
+
+        <script>
+            document.getElementById('hello').innerHTML = '안녕';
+            document.getElementById('hi').innerHTML = '고수에요';
+        </script>
+    </body>
+</html>
