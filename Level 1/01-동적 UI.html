@@ -1,0 +1,30 @@
+<!-- 
+동적 UI 만드는 스텝 (Alert 박스 만들기)
+
+
+[기본적인 UI 만드는 법칙]
+
+1. HTML CSS 로 미리 UI 디자인 / 필요하면 평소엔 숨김
+
+2. 자바스크립트 코드 : 버튼을 누르거나할 경우 UI를 보여달라고 짬
+
+이게 다임 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../Level 1/css/01-동적 UI.css" />
+    </head>
+    <body>
+        <div class="alert-box" id="alert">
+            알림창임
+            <button onclick="document.getElementById('alert').style.display = 'none';">닫기</button>
+        </div>
+        <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+    </body>
+</html>
